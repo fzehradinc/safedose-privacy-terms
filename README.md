@@ -1,24 +1,52 @@
-# SafeDose — Legal Pages
+# SafeDose — Legal Documents
 
-This folder contains static HTML files for the SafeDose Privacy Policy and Terms of Use.
+This repository contains professional, production-ready legal documentation for the SafeDose mobile application.
 
-Files:
+## Files
 
-- `index.html` — landing page linking the documents
-- `safedose-privacy.html` — Privacy Policy
-- `safedose-terms.html` — Terms of Use
+- `index.html` — Landing page with links to legal documents
+- `privacy.html` — Privacy Policy
+- `terms.html` — Terms of Use
 
-How to view locally:
+## Design Specifications
 
-- Option 1 (recommended): serve with Python's simple HTTP server
+The legal pages feature a clean, institutional design suitable for:
+- App Store compliance review
+- Regulatory compliance presentation
+- Investor due diligence
+- Professional legal documentation
 
-  1. Open a terminal in this directory.
-  2. Run `python -m http.server 8000` (Python 3).
-  3. Visit `http://localhost:8000` in your browser.
+Design characteristics:
+- White background with black/dark gray typography
+- Clean, minimal layout with professional serif headings
+- Fully responsive (mobile and desktop)
+- SEO-ready with proper meta tags
+- Accessibility-compliant semantic HTML
 
-- Option 2: double-click `index.html` to open the file directly in your browser (some fonts or features may require online access).
+## Viewing Locally
 
-Notes:
+**Option 1 (Recommended):** Use Python's simple HTTP server
 
-- The pages use Google Fonts (internet connection required to load them).
-- These are static HTML files and can be deployed to any static hosting provider.
+```bash
+python -m http.server 8000
+```
+
+Then visit `http://localhost:8000` in your browser.
+
+**Option 2:** Open `index.html` directly in your browser.
+
+## Deployment
+
+These are static HTML files and can be deployed to any static hosting provider:
+- Netlify
+- Vercel
+- GitHub Pages
+- AWS S3 + CloudFront
+- Any standard web server
+
+## Notes
+
+- All legal text content is preserved exactly as written
+- No external dependencies or frameworks required
+- System fonts only (no external font loading)
+- Print-friendly styling included
