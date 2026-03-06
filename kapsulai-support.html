@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kapsul AI — Support &amp; Help Center</title>
+<meta name="description" content="Kapsul AI Support - Get help with app, account, subscription, and health information. Educational medication information resources.">
+<meta name="keywords" content="support, help, faq, kapsul ai, medication, educational, information">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Kapsul AI — Support & Help Center">
+<meta property="og:description" content="Help, Information & Educational Resources for Kapsul AI">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kapsulai.com.tr/support">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ===== VARIABLES ===== */
+  :root {
+    --ink: #0f1923;
+    --teal: #00897b;
+    --teal-dark: #00695c;
+    --teal-pale: #e0f2f1;
+    --warm: #fafaf8;
+    --border: #e4e1db;
+    --muted: #64748b;
+    --accent: #f0faf9;
+    --warning-bg: #fff3cd;
+    --warning-border: #d32f2f;
+    --warning-text: #856404;
+    --danger: #d32f2f;
+  }
+
+  /* ===== RESET ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    background: var(--warm);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  /* ===== NAVIGATION ===== */
+  nav {
+    position: sticky; top: 0; z-index: 99;
+    background: rgba(250,250,248,0.93);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 6%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 60px;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .brand-dot {
+    width: 28px; height: 28px; border-radius: 7px;
+    background: var(--teal);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .brand-dot svg { width: 16px; height: 16px; fill: white; }
+  .brand-name { font-family: 'Fraunces', serif; font-size: 18px; color: var(--ink); }
+  .nav-tag {
+    font-size: 11px; color: var(--teal); background: var(--teal-pale);
+    padding: 3px 10px; border-radius: 20px; font-weight: 600;
+    letter-spacing: .04em; text-transform: uppercase;
+  }
+  .nav-links { display: flex; gap: 18px; align-items: center; }
+  .nav-links a {
+    font-size: 13px; color: var(--muted); text-decoration: none;
+    transition: color .15s;
+    min-height: 44px; display: inline-flex; align-items: center;
+  }
+  .nav-links a:hover { color: var(--teal); }
+
+  /* ===== HERO ===== */
+  .hero {
+    padding: 64px 6% 48px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+    color: white;
+    text-align: center;
+  }
+  .hero-chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(255,255,255,0.2); color: white;
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .06em; padding: 5px 14px; border-radius: 100px;
+    margin-bottom: 20px;
+  }
+  .hero-chip span { width: 5px; height: 5px; border-radius: 50%; background: white; display: block; }
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(28px, 4.5vw, 48px);
+    line-height: 1.15; color: white;
+    margin-bottom: 14px; font-weight: 400;
+  }
+  .hero p {
+    font-size: 1.1em; opacity: 0.92;
+    max-width: 600px; margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* ===== CRITICAL DISCLAIMER ===== */
+  .disclaimer-banner {
+    background: var(--warning-bg);
+    border-bottom: 3px solid var(--warning-border);
+    padding: 22px 6%;
+    text-align: center;
+  }
+  .disclaimer-banner .disclaimer-title {
+    font-size: 16px; font-weight: 700;
+    color: var(--danger); margin-bottom: 8px;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .disclaimer-banner p {
+    color: var(--warning-text); margin: 5px 0;
+    font-size: 14px; line-height: 1.7;
+    max-width: 800px; margin-left: auto; margin-right: auto;
+  }
+  .disclaimer-banner strong { color: #6b3a00; }
+  .disclaimer-banner .emergency-line {
+    font-size: 15px; font-weight: 700;
+    color: var(--danger); margin-top: 10px;
+  }
+
+  /* ===== LAYOUT ===== */
+  .layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* ===== SIDEBAR ===== */
+  .sidebar {
+    padding: 40px 24px 40px 6%;
+    position: sticky; top: 60px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+  }
+  .sidebar-title {
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .1em; color: var(--muted); margin-bottom: 16px;
+  }
+  .toc-link {
+    display: block; font-size: 12.5px; color: var(--muted);
+    text-decoration: none; padding: 6px 10px; border-radius: 6px;
+    margin-bottom: 2px; transition: all .15s;
+    border-left: 2px solid transparent;
+    min-height: 44px; display: flex; align-items: center;
+  }
+  .toc-link:hover, .toc-link.active {
+    color: var(--teal); background: var(--teal-pale);
+    border-left-color: var(--teal);
+  }
+  .toc-divider { height: 1px; background: var(--border); margin: 12px 0; }
+
+  /* ===== CONTENT ===== */
+  .content { padding: 48px 6% 80px 40px; max-width: 760px; }
+  section { margin-bottom: 52px; padding-top: 8px; }
+
+  h2 {
+    font-family: 'Fraunces', serif; font-size: 22px; font-weight: 600;
+    color: var(--ink); margin-bottom: 18px; padding-bottom: 12px;
+    border-bottom: 2px solid var(--teal-pale);
+    display: flex; align-items: center; gap: 12px;
+  }
+  .sec-num {
+    font-size: 11px; font-weight: 700; color: white;
+    background: var(--teal); padding: 3px 9px; border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+  }
+  h3 { font-size: 15px; font-weight: 600; color: var(--ink); margin: 22px 0 8px; }
+  p { color: #334155; margin-bottom: 13px; }
+  ul, ol { margin: 10px 0 14px 18px; }
+  li { color: #334155; margin-bottom: 7px; }
+  li::marker { color: var(--teal); }
+  a { color: var(--teal); text-decoration: none; border-bottom: 1px solid rgba(0,137,123,.25); }
+  a:hover { border-bottom-color: var(--teal); }
+  strong { color: var(--ink); font-weight: 600; }
+
+  /* ===== SPECIAL BOXES ===== */
+  .warning-box {
+    background: #fff1f2; border: 1.5px solid #fca5a5; border-radius: 10px;
+    padding: 16px 20px; margin: 16px 0;
+  }
+  .warning-box p { color: #7f1d1d; margin: 0; font-size: 13.5px; line-height: 1.65; }
+
+  .highlight-box {
+    background: var(--teal-pale); border-left: 4px solid var(--teal);
+    border-radius: 0 8px 8px 0; padding: 13px 17px; margin: 14px 0;
+    font-size: 13.5px; color: #0d3d38;
+  }
+
+  .info-card {
+    background: white; border: 1px solid var(--border);
+    border-radius: 9px; padding: 14px 16px; margin-bottom: 10px;
+  }
+  .info-card-label {
+    font-size: 10.5px; font-weight: 700; color: var(--teal);
+    text-transform: uppercase; letter-spacing: .06em; margin-bottom: 5px;
+  }
+
+  .medical-banner {
+    background: #fff7ed; border: 1.5px solid #fcd19c; border-radius: 12px;
+    padding: 18px 20px; display: flex; gap: 14px; align-items: flex-start;
+    margin-bottom: 30px;
+  }
+  .medical-banner .banner-icon {
+    font-size: 22px; flex-shrink: 0; margin-top: 2px;
+  }
+  .medical-banner p {
+    font-size: 13px; color: #92400e; margin: 0; line-height: 1.65;
+  }
+
+  /* ===== FAQ ===== */
+  .faq-item {
+    background: white; border: 1px solid var(--border);
+    border-radius: 10px; margin-bottom: 12px; overflow: hidden;
+    transition: box-shadow .2s;
+  }
+  .faq-item:hover { box-shadow: 0 2px 12px rgba(0,137,123,0.08); }
+  .faq-question {
+    padding: 16px 20px; cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between;
+    font-weight: 600; font-size: 14.5px; color: var(--ink);
+    user-select: none; gap: 12px;
+    list-style: none;
+    min-height: 54px;
+  }
+  .faq-question::-webkit-details-marker { display: none; }
+  .faq-question::after {
+    content: '+'; font-size: 20px; color: var(--teal);
+    font-weight: 400; flex-shrink: 0; transition: transform .2s;
+  }
+  details[open] .faq-question::after { content: '−'; }
+  .faq-answer {
+    padding: 0 20px 18px;
+    font-size: 14px; line-height: 1.75; color: #475569;
+  }
+  .faq-answer p { margin-bottom: 10px; }
+  .faq-answer ul { margin: 8px 0 10px 18px; }
+  .faq-answer li { font-size: 13.5px; margin-bottom: 5px; }
+  .faq-tag {
+    display: inline-block; font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .05em;
+    padding: 2px 8px; border-radius: 4px; margin-right: 8px;
+  }
+  .faq-tag.safety { background: #fff1f2; color: #b91c1c; }
+  .faq-tag.general { background: var(--teal-pale); color: var(--teal-dark); }
+  .faq-tag.billing { background: #ede9fe; color: #6d28d9; }
+  .faq-tag.privacy { background: #dbeafe; color: #1d4ed8; }
+
+  /* ===== CONTACT GRID ===== */
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px;
+  }
+  .contact-card {
+    background: var(--ink); border-radius: 10px; padding: 22px;
+    transition: transform .15s;
+  }
+  .contact-card:hover { transform: translateY(-2px); }
+  .contact-card h4 {
+    font-size: 11px; text-transform: uppercase;
+    letter-spacing: .07em; color: var(--teal); margin-bottom: 8px;
+  }
+  .contact-card p { font-size: 13px; color: #94a3b8; margin: 0; line-height: 1.7; }
+  .contact-card a { color: white; border-bottom-color: rgba(255,255,255,.2); min-height: 44px; display: inline-flex; align-items: center; }
+
+  /* ===== RESOURCES ===== */
+  .resource-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px;
+  }
+  .resource-card {
+    background: white; border: 1px solid var(--border);
+    border-radius: 9px; padding: 16px; transition: border-color .15s;
+  }
+  .resource-card:hover { border-color: var(--teal); }
+  .resource-card h4 {
+    font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 4px;
+  }
+  .resource-card p { font-size: 12px; color: var(--muted); margin: 0; line-height: 1.5; }
+  .resource-card a { border-bottom: none; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--ink); color: #64748b;
+    padding: 32px 6%; text-align: center;
+    font-size: 13px; line-height: 1.8;
+  }
+  footer .footer-brand {
+    font-family: 'Fraunces', serif; font-size: 16px;
+    color: white; margin-bottom: 6px;
+  }
+  footer .footer-desc { color: #94a3b8; font-size: 13px; margin-bottom: 14px; }
+  footer .footer-links { margin: 14px 0; }
+  footer .footer-links a {
+    color: var(--teal); margin: 0 12px;
+    font-size: 13px; border-bottom: none;
+  }
+  footer .footer-links a:hover { color: #4db6ac; }
+  footer .footer-disclaimer {
+    max-width: 700px; margin: 18px auto 0;
+    font-size: 12px; color: #64748b; line-height: 1.7;
+    padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  footer .footer-disclaimer strong { color: #94a3b8; font-weight: 600; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; }
+    .sidebar { display: none; }
+    .content { padding: 32px 5% 60px; max-width: 100%; }
+  }
+
+  @media (max-width: 768px) {
+    body { font-size: 16px; }
+    .hero { padding: 48px 5% 36px; }
+    .hero h1 { font-size: 1.8em; }
+    .hero p { font-size: 1em; }
+    .disclaimer-banner { padding: 18px 5%; }
+    .disclaimer-banner p { font-size: 13px; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .resource-grid { grid-template-columns: 1fr; }
+    nav { padding: 0 4%; }
+    .nav-links { gap: 10px; }
+    .nav-links a { font-size: 12px; }
+    h2 { font-size: 19px; }
+    .faq-question { font-size: 14px; padding: 14px 16px; }
+    .faq-answer { padding: 0 16px 16px; }
+  }
+
+  @media (max-width: 380px) {
+    .hero h1 { font-size: 1.5em; }
+    .nav-tag { display: none; }
+    .contact-card { padding: 16px; }
+  }
+
+  /* ===== PRINT ===== */
+  @media print {
+    nav, .sidebar { display: none; }
+    .layout { grid-template-columns: 1fr; }
+    .hero { background: white; color: var(--ink); }
+    footer { background: white; color: var(--ink); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== NAVIGATION ========== -->
+<nav>
+  <a href="https://kapsulai.com.tr" class="brand">
+    <div class="brand-dot">
+      <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+    </div>
+    <span class="brand-name">Kapsul AI</span>
+  </a>
+  <div class="nav-links">
+    <span class="nav-tag">Support Center</span>
+    <a href="safedose-privacy.html">Privacy</a>
+    <a href="safedose-terms.html">Terms</a>
+  </div>
+</nav>
+
+<!-- ========== CRITICAL DISCLAIMER — TOP OF PAGE ========== -->
+<div class="disclaimer-banner" role="alert" aria-label="Important medical disclaimer">
+  <div class="disclaimer-title">&#9888;&#65039; IMPORTANT DISCLAIMER</div>
+  <p>
+    Kapsul AI is an <strong>EDUCATIONAL and INFORMATIONAL</strong> application.
+    It is <strong>NOT a medical device</strong> and does <strong>NOT provide medical advice, diagnosis, or treatment recommendations</strong>.
+  </p>
+  <p>
+    All information is for <strong>educational purposes only</strong>.
+    <strong>Always consult a qualified healthcare professional</strong> before making any health-related decisions.
+  </p>
+  <p class="emergency-line">&#128680; In case of a medical emergency, call <strong>112</strong> immediately.</p>
+</div>
+
+<!-- ========== HERO ========== -->
+<header class="hero">
+  <div class="hero-chip"><span></span> Help &amp; Resources</div>
+  <h1>Kapsul AI Support Center</h1>
+  <p>Help, Information &amp; Educational Resources — Everything you need to get the most out of Kapsul AI.</p>
+</header>
+
+<!-- ========== MAIN LAYOUT ========== -->
+<div class="layout">
+
+  <!-- SIDEBAR / TABLE OF CONTENTS -->
+  <aside class="sidebar" aria-label="Table of contents">
+    <div class="sidebar-title">On this page</div>
+    <a class="toc-link" href="#welcome">Welcome</a>
+    <a class="toc-link" href="#what-is">What Is Kapsul AI?</a>
+    <a class="toc-link" href="#what-is-not">What Kapsul AI Is NOT</a>
+    <div class="toc-divider"></div>
+    <a class="toc-link" href="#faq">Frequently Asked Questions</a>
+    <div class="toc-divider"></div>
+    <a class="toc-link" href="#contact">Contact Us</a>
+    <a class="toc-link" href="#legal">Legal Documents</a>
+    <a class="toc-link" href="#resources">Additional Resources</a>
+    <a class="toc-link" href="#emergency">Emergency Guidelines</a>
+    <a class="toc-link" href="#feedback">Report an Issue</a>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- ===== WELCOME ===== -->
+    <section id="welcome">
+      <h2><span class="sec-num">01</span> Welcome</h2>
+      <p>
+        Welcome to the <strong>Kapsul AI Support Center</strong>. This page is designed to help you understand what Kapsul AI offers, how to use it responsibly, and how to reach us if you need assistance.
+      </p>
+      <div class="highlight-box">
+        Kapsul AI is an <strong>educational wellness application</strong> that provides general informational content about medications.
+        It is intended to support your awareness and learning — <strong>never to replace professional medical advice</strong>.
+        All content is for <strong>educational purposes only</strong>. Please always <strong>consult your healthcare professional</strong>.
+      </div>
+    </section>
+
+    <!-- ===== WHAT IS KAPSUL AI ===== -->
+    <section id="what-is">
+      <h2><span class="sec-num">02</span> What Is Kapsul AI?</h2>
+      <p>
+        Kapsul AI is an <strong>educational and informational wellness</strong> mobile application that helps users learn about medications, their general uses, potential interactions, and related health topics. All content is for <strong>educational purposes only</strong>.
+      </p>
+      <h3>What Kapsul AI Provides</h3>
+      <ul>
+        <li>General educational information about medications and active ingredients</li>
+        <li>Informational summaries of potential drug interactions for awareness</li>
+        <li>Health-related educational articles and learning resources</li>
+        <li>A user-friendly interface for exploring medication information</li>
+        <li>Premium access to an expanded educational database (5,000+ medications, 9,000+ interactions)</li>
+      </ul>
+
+      <div class="medical-banner">
+        <div class="banner-icon">&#128218;</div>
+        <p>
+          <strong>Think of Kapsul AI like a health encyclopedia.</strong> It provides information for your awareness and learning. You should always discuss any medication-related questions with your doctor, pharmacist, or other qualified healthcare provider.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== WHAT KAPSUL AI IS NOT ===== -->
+    <section id="what-is-not">
+      <h2><span class="sec-num">03</span> What Kapsul AI Is NOT</h2>
+      <div class="warning-box">
+        <p>
+          <strong>&#9888;&#65039; Kapsul AI is NOT any of the following:</strong>
+        </p>
+      </div>
+      <ul>
+        <li><strong>NOT a medical device</strong> — It has no regulatory approval (FDA, CE, etc.) and does not function as a medical device.</li>
+        <li><strong>NOT a diagnostic tool</strong> — It does not diagnose any disease or medical condition.</li>
+        <li><strong>NOT a treatment advisor</strong> — It does not recommend, prescribe, or suggest any treatment plan.</li>
+        <li><strong>NOT a clinical decision support system (CDSS)</strong> — It does not assist in making clinical decisions.</li>
+        <li><strong>NOT a replacement for your doctor</strong> — It does not replace consultations with qualified healthcare professionals.</li>
+        <li><strong>NOT providing medical advice</strong> — All content is informational and educational only.</li>
+      </ul>
+      <div class="highlight-box">
+        <strong>Always consult a qualified healthcare professional</strong> before starting, stopping, or changing any medication or health-related behavior.
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq">
+      <h2><span class="sec-num">04</span> Frequently Asked Questions</h2>
+
+      <!-- Q1 -->
+      <details class="faq-item" open>
+        <summary class="faq-question">
+          <span><span class="faq-tag safety">Safety</span>Is Kapsul AI a medical device?</span>
+        </summary>
+        <div class="faq-answer">
+          <p>
+            <strong style="color: #d32f2f;">No.</strong> Kapsul AI is an <strong>educational application only</strong>. It is not classified, registered, or approved as a medical device by any regulatory authority (FDA, CE, T.C. Sa&#287;l&#305;k Bakanl&#305;&#287;&#305;, etc.). It does not:
+          </p>
+          <ul>
+            <li>Function as a medical device</li>
+            <li>Provide medical advice or clinical recommendations</li>
+            <li>Make treatment recommendations</li>
+            <li>Replace doctor consultations</li>
+            <li>Serve as a clinical decision support system</li>
+          </ul>
+          <p>We provide <strong>informational content only</strong>. Always consult your <strong>healthcare professional</strong> before making health decisions.</p>
+        </div>
+      </details>
+
+      <!-- Q2 -->
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span><span class="faq-tag safety">Safety</span>Does Kapsul AI provide medical advice?</span>
+        </summary>
+        <div class="faq-answer">
+          <p>
+            <strong style="color: #d32f2f;">No.</strong> Kapsul AI provides <strong>general educational information only</strong>. None of the content in the app should be considered medical advice, diagnosis, or treatment recommendations.
+          </p>
+          <p>
+            The information is intended to increase your general awareness about medications. For personalized medical guidance, please consult your doctor, pharmacist, or another qualified healthcare professional.
+          </p>
+        </div>
+      </details>
+
+      <!-- Q3 -->
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span><span class="faq-tag general">Usage</span>How should I use Kapsul AI?</span>
+        </summary>
+        <div class="faq-answer">
+          <p>Use Kapsul AI as an <strong>educational companion</strong>:</p>
+          <ul>
+            <li><strong>Learn</strong> — Read about medications and their general properties for your own awareness.</li>
+            <li><strong>Explore</strong> — Browse potential interactions to become more informed.</li>
+            <li><strong>Discuss</strong> — Bring what you've learned to your healthcare provider to have a more informed conversation.</li>
+          </ul>
+          <p><strong>Do NOT</strong> use Kapsul AI to make health decisions on your own. Always consult your healthcare team.</p>
+        </div>
+      </details>
+
+      <!-- Q4 -->
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span><span class="faq-tag billing">Premium</span>What is included in Kapsul AI Premium?</span>
+        </summary>
+        <div class="faq-answer">
+          <p>Kapsul AI Premium provides expanded access to our <strong>educational database</strong>, including:</p>
+          <ul>
+            <li>Access to information on <strong>5,000+ medications</strong></li>
+            <li>Educational content on <strong>9,000+ potential drug interactions</strong></li>
+            <li>Priority access to new educational content and features</li>
+            <li>Ad-free educational experience</li>
+          </ul>
+          <p>All Premium content remains <strong>educational and informational only</strong> and does not constitute medical advice.</p>
+        </div>
+      </details>
+
+      <!-- Q5 -->
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span><span class="faq-tag privacy">Privacy</span>How is my data protected?</span>
+        </summary>
+        <div class="faq-answer">
+          <p>We take your privacy and data security extremely seriously:</p>
+          <ul>
+            <li><strong>AES-256 encryption</strong> — Industry-standard encryption for data at rest and in transit</li>
+            <li><strong>HIPAA-equivalent security practices</strong> — We follow healthcare-grade security standards</li>
+            <li><strong>No third-party data sharing</strong> — Your personal data is never sold or shared with third parties</li>
+            <li><strong>Minimal data collection</strong> — We only collect what is necessary for app functionality</li>
+            <li><strong>Transparent practices</strong> — See our <a href="safedose-privacy.html">Privacy Policy</a> for complete details</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- Q6 -->
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span><span class="faq-tag general">Usage</span>Who should use Kapsul AI?</span>
+        </summary>
+        <div class="faq-answer">
+          <p>Kapsul AI is designed for <strong>adults (18+)</strong> who are interested in:</p>
+          <ul>
+            <li>Learning more about medications and their general properties</li>
+            <li>Becoming more informed before discussing medications with their doctor</li>
+            <li>Understanding general information about potential drug interactions</li>
+            <li>Expanding their health literacy for educational purposes</li>
+          </ul>
+          <p>The app is an <strong>educational wellness tool</strong> — it is not intended for clinical or professional medical use. All content is for <strong>educational purposes only</strong>. Always <strong>consult your healthcare professional</strong> for personalized guidance.</p>
+        </div>
+      </details>
+
+      <!-- Q7 -->
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span><span class="faq-tag safety">Safety</span>Who should NOT use Kapsul AI as a primary resource?</span>
+        </summary>
+        <div class="faq-answer">
+          <p>Kapsul AI is <strong>not appropriate as a primary resource</strong> if you are:</p>
+          <ul>
+            <li>Seeking a <strong>medical diagnosis</strong> — Please visit a healthcare professional</li>
+            <li>Looking for <strong>treatment recommendations</strong> — Consult your doctor or pharmacist</li>
+            <li>Trying to <strong>replace doctor visits</strong> — The app is a learning supplement, not a substitute</li>
+            <li>Experiencing a <strong>medical emergency</strong> — Call <strong>112</strong> immediately</li>
+            <li>Making decisions about <strong>starting, stopping, or changing medication</strong> — Discuss with your healthcare provider first</li>
+          </ul>
+          <div class="warning-box">
+            <p><strong>&#128680; If you are experiencing a medical emergency, stop using the app and call 112 immediately.</strong></p>
+          </div>
+        </div>
+      </details>
+
+      <!-- Q8 -->
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span><span class="faq-tag billing">Billing</span>How do I cancel my subscription?</span>
+        </summary>
+        <div class="faq-answer">
+          <p>You can cancel your Kapsul AI Premium subscription at any time through one of these methods:</p>
+          <ul>
+            <li><strong>In-app:</strong> Go to Settings &rarr; Subscription &rarr; Cancel Subscription</li>
+            <li><strong>Apple ID Settings:</strong> Open iPhone Settings &rarr; [Your Name] &rarr; Subscriptions &rarr; Kapsul AI &rarr; Cancel</li>
+            <li><strong>Email:</strong> Send a cancellation request to <a href="mailto:support@kapsulai.com">support@kapsulai.com</a></li>
+          </ul>
+          <p>After cancellation, you will retain Premium access until the end of your current billing period. No refunds are provided for partial billing periods, in accordance with Apple's subscription policies.</p>
+        </div>
+      </details>
+
+      <!-- Q9 -->
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span><span class="faq-tag general">Usage</span>Is Kapsul AI available in Turkish?</span>
+        </summary>
+        <div class="faq-answer">
+          <p>Yes. Kapsul AI is available in <strong>Turkish</strong> and <strong>English</strong>. The app automatically adapts to your device's language settings, or you can manually switch languages in the app settings. All educational wellness content is available in both languages.</p>
+        </div>
+      </details>
+
+      <!-- Q10 -->
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span><span class="faq-tag privacy">Privacy</span>Can I delete my account and data?</span>
+        </summary>
+        <div class="faq-answer">
+          <p>Yes. You can request complete account and data deletion at any time:</p>
+          <ul>
+            <li><strong>In-app:</strong> Go to Settings &rarr; Account &rarr; Delete My Account</li>
+            <li><strong>Email:</strong> Send a deletion request to <a href="mailto:support@kapsulai.com">support@kapsulai.com</a></li>
+          </ul>
+          <p>We will process your request within <strong>30 days</strong> and permanently remove all personal data associated with your account, in compliance with applicable data protection regulations.</p>
+        </div>
+      </details>
+
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+      <h2><span class="sec-num">05</span> Contact Us</h2>
+      <p>Have a question not answered in the FAQ? We're here to help.</p>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h4>&#9993;&#65039; Email Support</h4>
+          <p>General questions &amp; assistance</p>
+          <p style="margin-top: 8px;">
+            <a href="mailto:support@kapsulai.com">support@kapsulai.com</a>
+          </p>
+          <p style="font-size: 11px; color: #64748b; margin-top: 6px;">Response time: 24–48 hours</p>
+        </div>
+        <div class="contact-card">
+          <h4>&#127760; Website</h4>
+          <p>Learn more about Kapsul AI</p>
+          <p style="margin-top: 8px;">
+            <a href="https://kapsulai.com.tr" target="_blank" rel="noopener">kapsulai.com.tr</a>
+          </p>
+          <p style="font-size: 11px; color: #64748b; margin-top: 6px;">News, updates &amp; information</p>
+        </div>
+        <div class="contact-card">
+          <h4>&#128241; In-App Support</h4>
+          <p>Get help directly within the app</p>
+          <p style="margin-top: 8px; color: #94a3b8; font-size: 13px;">
+            Settings &rarr; Help &amp; Support
+          </p>
+          <p style="font-size: 11px; color: #64748b; margin-top: 6px;">Fastest way to reach us</p>
+        </div>
+        <div class="contact-card">
+          <h4>&#128172; Feedback</h4>
+          <p>Report bugs or suggest features</p>
+          <p style="margin-top: 8px;">
+            <a href="mailto:feedback@kapsulai.com">feedback@kapsulai.com</a>
+          </p>
+          <p style="font-size: 11px; color: #64748b; margin-top: 6px;">We value your input</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LEGAL DOCUMENTS ===== -->
+    <section id="legal">
+      <h2><span class="sec-num">06</span> Legal Documents</h2>
+      <p>Review our complete legal documentation below. These documents explain how we collect, use, and protect your data, our terms of service, and our medical disclaimer.</p>
+
+      <div class="resource-grid">
+        <a href="safedose-privacy.html" class="resource-card" style="text-decoration: none;">
+          <h4>&#128274; Privacy Policy</h4>
+          <p>How we collect, use, protect, and handle your personal information and data when you use Kapsul AI.</p>
+        </a>
+        <a href="safedose-terms.html" class="resource-card" style="text-decoration: none;">
+          <h4>&#128220; Terms of Use</h4>
+          <p>The terms and conditions governing your use of Kapsul AI, including subscription terms and user responsibilities.</p>
+        </a>
+        <a href="#disclaimer-section" class="resource-card" style="text-decoration: none;">
+          <h4>&#9888;&#65039; Medical Disclaimer</h4>
+          <p>Important information about the educational nature of Kapsul AI and the limitations of the information provided.</p>
+        </a>
+        <a href="mailto:legal@kapsulai.com" class="resource-card" style="text-decoration: none;">
+          <h4>&#128231; Legal Inquiries</h4>
+          <p>For legal questions or requests related to data protection, compliance, or intellectual property.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== ADDITIONAL RESOURCES ===== -->
+    <section id="resources">
+      <h2><span class="sec-num">07</span> Additional Resources</h2>
+      <p>For reliable, evidence-based health information, we recommend the following trusted sources:</p>
+
+      <div class="resource-grid">
+        <a href="https://www.who.int" target="_blank" rel="noopener" class="resource-card" style="text-decoration: none;">
+          <h4>&#127758; World Health Organization (WHO)</h4>
+          <p>Global health guidance and medication safety information.</p>
+        </a>
+        <a href="https://www.nih.gov" target="_blank" rel="noopener" class="resource-card" style="text-decoration: none;">
+          <h4>&#127891; National Institutes of Health (NIH)</h4>
+          <p>Comprehensive medical research and health information.</p>
+        </a>
+        <a href="https://www.mayoclinic.org" target="_blank" rel="noopener" class="resource-card" style="text-decoration: none;">
+          <h4>&#127973; Mayo Clinic</h4>
+          <p>Patient-friendly medical information from a leading hospital.</p>
+        </a>
+        <a href="https://www.webmd.com" target="_blank" rel="noopener" class="resource-card" style="text-decoration: none;">
+          <h4>&#128214; WebMD</h4>
+          <p>Accessible health and medication information for consumers.</p>
+        </a>
+        <a href="https://www.saglik.gov.tr" target="_blank" rel="noopener" class="resource-card" style="text-decoration: none;">
+          <h4>&#127481;&#127479; T.C. Sa&#287;l&#305;k Bakanl&#305;&#287;&#305;</h4>
+          <p>Republic of Turkey Ministry of Health — official health guidance.</p>
+        </a>
+        <a href="https://www.titck.gov.tr" target="_blank" rel="noopener" class="resource-card" style="text-decoration: none;">
+          <h4>&#128138; T&#304;TCK</h4>
+          <p>Turkish Medicines and Medical Devices Agency — drug safety information.</p>
+        </a>
+      </div>
+
+      <div class="highlight-box" style="margin-top: 20px;">
+        <strong>Note:</strong> External links are provided for informational purposes. Kapsul AI is not affiliated with these organizations and is not responsible for external content.
+      </div>
+    </section>
+
+    <!-- ===== EMERGENCY GUIDELINES ===== -->
+    <section id="emergency">
+      <h2><span class="sec-num">08</span> Emergency Guidelines</h2>
+      <div class="warning-box" style="border-color: #d32f2f; background: #fef2f2;">
+        <p style="font-size: 15px;">
+          <strong>&#128680; WHEN TO CALL 112 (EMERGENCY):</strong>
+        </p>
+        <p>Call emergency services <strong>immediately</strong> if you or someone you know experiences:</p>
+      </div>
+      <ul>
+        <li><strong>Suspected overdose</strong> or poisoning</li>
+        <li><strong>Severe allergic reaction</strong> (anaphylaxis) — difficulty breathing, swelling, hives</li>
+        <li><strong>Chest pain</strong>, sudden numbness, difficulty speaking (signs of heart attack or stroke)</li>
+        <li><strong>Severe adverse drug reactions</strong> — unexpected severe symptoms after taking medication</li>
+        <li><strong>Loss of consciousness</strong> or unresponsiveness</li>
+        <li>Any situation where you believe there is an <strong>immediate threat to life</strong></li>
+      </ul>
+      <div class="highlight-box" style="background: #fef2f2; border-left-color: #d32f2f; color: #7f1d1d;">
+        <strong>Kapsul AI is NOT an emergency service.</strong> In any medical emergency, close the app and call <strong>112</strong> or go to the nearest emergency department immediately. Do not rely on any app for emergency medical situations.
+      </div>
+    </section>
+
+    <!-- ===== FEEDBACK / REPORT ===== -->
+    <section id="feedback">
+      <h2><span class="sec-num">09</span> Report an Issue</h2>
+      <p>We are committed to providing accurate, up-to-date educational wellness content. If you notice any errors or have concerns, please let us know. Remember, all information is for <strong>educational purposes only</strong> — always <strong>consult your healthcare professional</strong>.</p>
+
+      <h3>How to Report</h3>
+      <ul>
+        <li><strong>Content errors:</strong> Email <a href="mailto:support@kapsulai.com">support@kapsulai.com</a> with the subject "Content Error Report"</li>
+        <li><strong>Technical bugs:</strong> Email <a href="mailto:support@kapsulai.com">support@kapsulai.com</a> with the subject "Bug Report" and include your device model and iOS version</li>
+        <li><strong>Feature requests:</strong> Email <a href="mailto:feedback@kapsulai.com">feedback@kapsulai.com</a> with your suggestion</li>
+        <li><strong>Security concerns:</strong> Email <a href="mailto:security@kapsulai.com">security@kapsulai.com</a> — we take security reports very seriously</li>
+      </ul>
+      <p>We review all reports and aim to respond within <strong>24–48 hours</strong>.</p>
+    </section>
+
+    <!-- ===== DETAILED MEDICAL DISCLAIMER ===== -->
+    <section id="disclaimer-section">
+      <h2><span class="sec-num">10</span> Medical Disclaimer</h2>
+      <div class="warning-box" style="border-color: #d32f2f;">
+        <p><strong>&#9888;&#65039; COMPLETE MEDICAL DISCLAIMER</strong></p>
+      </div>
+      <p>
+        Kapsul AI (the "App") is developed and maintained for <strong>educational and informational purposes only</strong>. The content provided within the App is <strong>not intended to be a substitute for professional medical advice, diagnosis, or treatment</strong>.
+      </p>
+      <p>
+        <strong>The App is not a medical device.</strong> It has not been evaluated, cleared, or approved by any regulatory authority — including but not limited to the U.S. Food and Drug Administration (FDA), European Medicines Agency (EMA), or the Republic of Turkey Ministry of Health — for any medical purpose.
+      </p>
+      <p>
+        The App does not:
+      </p>
+      <ul>
+        <li>Provide medical advice or clinical recommendations</li>
+        <li>Diagnose any disease, condition, or health state</li>
+        <li>Recommend, prescribe, or suggest any treatment, therapy, or medication</li>
+        <li>Replace the judgment or expertise of qualified healthcare professionals</li>
+        <li>Function as a clinical decision support system (CDSS)</li>
+      </ul>
+      <p>
+        <strong>Reliance on any information provided by Kapsul AI is solely at your own risk.</strong> Always seek the advice of your physician, pharmacist, or other qualified health provider with any questions you may have regarding a medical condition or medication.
+      </p>
+      <p>
+        <strong>Never disregard professional medical advice or delay seeking it because of something you have read within this application.</strong>
+      </p>
+      <div class="highlight-box" style="background: #fef2f2; border-left-color: #d32f2f; color: #7f1d1d; margin-top: 16px;">
+        <strong>If you think you may have a medical emergency, call 112 (or your local emergency number) immediately.</strong> Do not use this application to seek emergency help.
+      </div>
+    </section>
+
+    <!-- ===== ABOUT KAPSUL AI ===== -->
+    <section id="about">
+      <h2><span class="sec-num">11</span> About Kapsul AI</h2>
+      <p>
+        Kapsul AI is an <strong>educational wellness and medication information platform</strong> built with the mission of improving health literacy. Our team is committed to providing accessible, accurate, and easy-to-understand information about medications. All content is for <strong>educational purposes only</strong> and users should always <strong>consult a qualified healthcare professional</strong> before making any health decisions.
+      </p>
+      <div class="info-card">
+        <div class="info-card-label">Our Mission</div>
+        <p style="margin: 0;">To empower individuals with educational information about medications, helping users become more informed participants in conversations with their healthcare providers.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-label">Our Commitment</div>
+        <p style="margin: 0;">We are committed to data privacy, content accuracy, transparency about our limitations, and the highest standards of user trust. We continuously update our educational content and welcome user feedback.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-label">Content Sources</div>
+        <p style="margin: 0;">Our educational content is compiled from publicly available pharmaceutical references and databases. It is reviewed for general accuracy but is <strong>not a substitute for individualized medical consultation</strong>.</p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="footer-brand">Kapsul AI</div>
+  <div class="footer-desc">Educational Wellness &amp; Medication Information Platform</div>
+  <div class="footer-links">
+    <a href="safedose-privacy.html">Privacy Policy</a>
+    <a href="safedose-terms.html">Terms of Use</a>
+    <a href="#disclaimer-section">Medical Disclaimer</a>
+    <a href="#contact">Support</a>
+  </div>
+  <p style="color: #94a3b8; font-size: 13px;">
+    &copy; 2025–2026 Kapsul AI. All rights reserved.
+  </p>
+  <div class="footer-disclaimer">
+    <strong>&#9888;&#65039; MEDICAL DISCLAIMER:</strong>
+    Kapsul AI is an educational application only. It is NOT a medical device and does NOT provide medical advice, diagnosis, or treatment recommendations.
+    All information is for educational purposes only. Always consult a qualified healthcare professional before making health-related decisions.
+    In case of emergency, call <strong>112</strong> immediately.
+  </div>
+</footer>
+
+<!-- ===== FAQ EXPAND/COLLAPSE SCRIPT ===== -->
+<script>
+  // Highlight active sidebar link on scroll
+  (function () {
+    const links = document.querySelectorAll('.toc-link');
+    const sections = [];
+    links.forEach(function (link) {
+      const id = link.getAttribute('href').replace('#', '');
+      const el = document.getElementById(id);
+      if (el) sections.push({ id: id, el: el, link: link });
+    });
+    if (!sections.length) return;
+    window.addEventListener('scroll', function () {
+      let current = sections[0].id;
+      for (let i = 0; i < sections.length; i++) {
+        if (sections[i].el.getBoundingClientRect().top <= 100) {
+          current = sections[i].id;
+        }
+      }
+      links.forEach(function (l) { l.classList.remove('active'); });
+      var active = document.querySelector('.toc-link[href="#' + current + '"]');
+      if (active) active.classList.add('active');
+    }, { passive: true });
+  })();
+</script>
+
+</body>
+</html>
